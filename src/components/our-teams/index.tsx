@@ -1,3 +1,5 @@
+import { behance, facebook, twitter } from "../../assets";
+
 export default function OurTeam() {
   const teamMembers = [
     {
@@ -61,9 +63,9 @@ function TeamMember({
       <h3 className="text-xl font-semibold mb-2">{name}</h3>
       <p className="text-gray-600 mb-4">{role}</p>
       <div className="flex justify-center space-x-4">
-        <SocialIcon icon="facebook" />
-        <SocialIcon icon="twitter" />
-        <SocialIcon icon="behance" />
+        <SocialIcon icon={facebook} />
+        <SocialIcon icon={twitter} />
+        <SocialIcon icon={behance} />
       </div>
     </div>
   );
@@ -73,9 +75,9 @@ function SocialIcon({ icon }: { icon: string }) {
   return (
     <a href="#" className="text-gray-400 hover:text-gray-600">
       <span className="sr-only">{icon}</span>
-      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-5.514 0-10-4.486-10-10s4.486-10 10-10 10 4.486 10 10-4.486 10-10 10z" />
-      </svg>
+      <div className="w-7 h-7 border-2 rounded-full items-center justify-center p-1">
+        <img src={icon} alt={icon} className="w-full h-full object-contain" />
+      </div>
     </a>
   );
 }
