@@ -1,19 +1,9 @@
-import Banner from "../../components/banner";
-import Contributions from "../../components/contributions";
-import Header from "../../components/header";
-import OurTeam from "../../components/our-teams";
+import WhyChooseUs from "../../components/chooseus";
 
 function AboutUs() {
   return (
     <section className="min-h-screen bg-white">
-      {/* Header & Breadcrumb */}
-      <Header />
-      {/* Banner */}
-      <Banner />
-      {/* Contributions */}
-      <Contributions />
-      {/* Our Team */}
-      <OurTeam />
+      <WhyChooseUs />
     </section>
   );
 }
